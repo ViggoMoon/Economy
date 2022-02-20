@@ -1,0 +1,10 @@
+name: Economy
+version: 1.0
+main: ViggoMoon\Economy\Main
+api: 4.0.0
+author: ViggoMoon
+
+permissions:
+  use.setmoney.command:
+    description: "Allow Use Set Money Command"
+    default: op
