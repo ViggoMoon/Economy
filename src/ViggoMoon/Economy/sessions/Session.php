@@ -15,6 +15,7 @@ class Session
     {
         $this->sessionName = $sessionName;
         $this->config = new Config(Main::getPlugin()->getDataFolder()."sessions".DIRECTORY_SEPARATOR.$sessionName.".json", Config::JSON);
+        $this->config->save();
     }
 
     public function setMoney(int $value)

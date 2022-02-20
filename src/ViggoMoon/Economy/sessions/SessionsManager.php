@@ -9,7 +9,7 @@ class SessionsManager
 
     public static function addSession(string $sessionName)
     {
-        self::$sessions[$sessionName] = "Session";
+        self::$sessions[$sessionName] = new Session($sessionName);
     }
 
     public static function existsSession(string $sessionName): bool

@@ -14,6 +14,7 @@ class Main extends PluginBase
 
     protected function onEnable(): void
     {
+        @mkdir($this->getDataFolder()."sessions");
         self::$plugin = $this;
         $this->getServer()->getCommandMap()->registerAll("Economy", [new MyMoney("mymoney"), new SetMoney("setmoney")]);
         $this->getServer()->getPluginManager()->registerEvents(new SessionListeners(), $this);
